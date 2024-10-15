@@ -1,0 +1,26 @@
+{
+    "name": "CS361-Main",
+    "version": "1.0.0",
+    "description": "site that hosts a game",
+    "main": "app.js",
+    "scripts": {
+      "start": "nodemon app.js",
+      "serve": "npx forever start app.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/meows4h/CS361-Main.git"
+    },
+    "author": "Rox Beecher",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/meows4h/CS361-Main/issues"
+    },
+    "homepage": "https://github.com/meows4h/CS361-Main#readme",
+    "dependencies": {
+      "express": "^4.21.0",
+      "express-handlebars": "^8.0.1",
+      "forever": "^1.0.1",
+      "nodemon": "^3.1.7"
+    }
+  }
