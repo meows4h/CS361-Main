@@ -18,6 +18,37 @@
 
 <body>
 
+    <!-- options modal -->
+    <div id="confirmation-options" class="w3-modal">
+    <div class="w3-modal-content w3-animate-bottom">
+        <div class="w3-container">
+            <p class="w3-center" style="margin: 20px">This will reset all the current options. Are you sure?</p>
+            <div class="w3-bar w3-display-bottomleft">
+                <span onclick="document.getElementById('confirmation-options').style.display='none'"
+                class="w3-button w3-gray w3-right">No</span>
+                <span onclick="document.getElementById('confirmation-options').style.display='none'"
+                class="w3-button w3-red w3-right">Yes</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- game modal -->
+    <div id="confirmation-game" class="w3-modal">
+    <div class="w3-modal-content w3-animate-bottom">
+        <div class="w3-container">
+            <p class="w3-center" style="margin: 20px">This will reset the current game. Are you sure?</p>
+            <div class="w3-bar w3-display-bottomleft">
+                <span onclick="document.getElementById('confirmation-game').style.display='none'"
+                class="w3-button w3-gray w3-right">No</span>
+                <span onclick="document.getElementById('confirmation-game').style.display='none'"
+                class="w3-button w3-red w3-right">Yes</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- main image -->
     <div class="bgimg w3-display-container w3-opacity-min">
         <div class="w3-display-middle" style="white-space:nowrap;">
             <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Phase 4 DSR Quiz<span class="w3-hide-small"></span></span>
@@ -31,17 +62,22 @@
 
         <!-- class picker -->
         <div class="w3-left w3-half w3-pale-red" style="padding: 0 2%">
-            <p class="w3-left w3-left-align w3-threequarter" style="">Click the icon to select what type of class you wish to play as.</p>
-            <img src="./images/index/dps.png" class="w3-button w3-image w3-quarter w3-border w3-border-red" style="min-width: 75px; max-width: 100px; padding: 0 0 0 0;">
+            <p class="w3-left w3-left-align w3-threequarter" style="padding: 0 4px; 0 0">Click the icon to select what type of class you wish to play as.</p>
+            <img src="./images/index/dps.png" class="w3-button w3-image w3-quarter w3-border w3-border-red" style="min-width: 75px; max-width: 100px; width:22%; padding: 0 0 0 0;">
         </div>
 
         <!-- position picker -->
         <div class="w3-right w3-half w3-pale-blue" style="padding: 0 2%">
-            <p class="w3-left w3-left-align w3-threequarter" style="">Click the icon to select what spot you are playing the role in.</p>
-            <img src="./images/index/1.png" class="w3-button w3-image w3-quarter w3-border w3-border-blue" style="min-width: 75px; max-width: 100px; padding: 0 0 0 0;">
+            <p class="w3-left w3-left-align w3-threequarter" style="padding: 0 4px; 0 0">Click the icon to select what spot you are playing the role in.</p>
+            <img src="./images/index/1.png" class="w3-button w3-image w3-quarter w3-border w3-border-blue" style="min-width: 75px; max-width: 100px; width:22%; padding: 0 0 0 0;">
         </div>
 
     </div>
+
+    <!-- reset -->
+    <button onclick="document.getElementById('confirmation-options').style.display='block'" class="w3-right w3-button w3-border w3-border-black w3-pale-yellow" style="margin-right: 10%; padding: 0;">
+        <p style="margin: 0 10px">Reset</p>
+    </button>
 
     <br>
 
@@ -56,12 +92,19 @@
     <div class="w3-container w3-center w3-border w3-border-black" style="width: 80%; margin-left: 10%; margin-right: 10%; padding: 0">
 
         <!-- feedback -->
-        <div class="w3-border w3-border-black" style="height: 80px;">
-            <p class="w3-center-align">You are playing as [insert role] in the [number spot] spot. After the eyes have cast "Hatebound", you have been assigned [blue/red] chains. Where would you like to move to next? (click a green circle to move to it)</p>
+        <div class="w3-border w3-border-black" style="height: 120px;">
+            <p class="w3-center-align">You are playing as [insert role] in the [number spot] spot. After the eyes have cast "Hatebound", you have been assigned [blue/red] chains. Where would you like to move to next?</p>
+            <p class="w3-center-align"><em>(click a green circle to move to it)</em></p>
         </div>
 
         <!-- play area-->
         <div class="w3-border w3-border-black" style="height: 480px;">
+            
+            <!-- reset -->
+            <button onclick="document.getElementById('confirmation-game').style.display='block'" class="w3-right w3-button w3-border w3-border-black w3-pale-yellow" style="padding: 0;">
+                <p style="margin: 0 10px">Reset</p>
+            </button>
+
         </div>
 
         <!-- history -->
