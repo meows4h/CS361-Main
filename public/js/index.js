@@ -9,6 +9,8 @@ if (chains == 0) {
     contextText.innerHTML = contextText.innerHTML.replace('[]', '[blue]');
 }
 
+const rngText = document.querySelector('.rngBlock');
+
 // class select
 document.querySelectorAll('.classSelect').forEach(img => {
     img.addEventListener('click', (event) => {
@@ -95,7 +97,7 @@ document.querySelectorAll('.playerMove').forEach(img => {
 
         const positionID = event.target.getAttribute('data-id');
 
-        fetch('/move', {
+        fetch('/rng', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -105,6 +107,7 @@ document.querySelectorAll('.playerMove').forEach(img => {
         .then(response => response.json())
         .then(data => {
             console.log('Response:', data);
+            rngText.innerHTML = data;
         })
     })
 })
