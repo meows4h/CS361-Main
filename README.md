@@ -1,4 +1,4 @@
-# Main Program Project for CS361
+# Main Program Project for DSR P4 Simulation
 This is supposed to be a main program that utilizes microservices to power the information it uses and gathers.
 
 ## Current Functions
